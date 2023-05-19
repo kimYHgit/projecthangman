@@ -6,7 +6,22 @@ let words = [
   'delight',"happy","sad",
   "smile","notebook"
 ];
-
+ class Word_length {
+    constructor(min,max)
+    {
+      this.min = min;
+      this.max = max;
+    }
+    take_word()
+    {
+      while(1)
+      {
+        let word = words[Math.floor(Math.random()*words.length)];
+        if(this.min <= word.length && this.max >= word.length)
+          return word;
+      }
+    }
+  }
 let answer = '';
 let maxWrong = 10; //최대 틀릴수있는 횟수 
 let mistakes = 0;
@@ -16,7 +31,10 @@ let wordStatus = null;
 
 //랜덤으로 단어를 추출한다.
 function randomWord() {
-  answer = words[Math.floor(Math.random() * words.length)];
+  let min = prompt('최솟값 입력(1이상)');
+  let max = prompt('최댓값 입력(7이하)');
+  const word1 = new Word_length(min,max);
+  answer = word1.take_word();
 }
 
 function generateButtons() {
