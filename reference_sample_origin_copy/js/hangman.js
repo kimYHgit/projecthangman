@@ -61,14 +61,14 @@ function updateHangmanPicture() {
 
 function checkIfGameWon() {
   if (wordStatus === answer) {
-    document.getElementById('keyboard').innerHTML = 'You Won!!!';
+    document.getElementById('keyboard').innerHTML = '도라에몽 살리기 완료!!!';
   }
 }
 
 function checkIfGameLost() {
   if (mistakes === maxWrong) {
-    document.getElementById('wordSpotlight').innerHTML = 'The answer was: ' + answer;
-    document.getElementById('keyboard').innerHTML = 'You Lost!!!';
+    document.getElementById('wordSpotlight').innerHTML = '아쉽지만 정답은 : ' + answer;
+    document.getElementById('keyboard').innerHTML = '아아....도라에몽은 갔습니다...';
   }
 }
 
