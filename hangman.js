@@ -1,28 +1,22 @@
-var programming_languages = [
-	"python",
-	"javascript",
-	"mongodb",
-	"json",
-	"java",
-	"html",
-	"css",
-	"c",
-	"csharp",
-	"golang",
-	"kotlin",
-	"php",
-	"sql",
-	"ruby"
-]
+//단어라이브러리 배열 생성
+let words = [        
+  "wisdom", 'journey','freedom','passion','harmony',
+  'success','fortune','vibrant','compass','thrive','serene',
+  'enchant','unity','courage','inspire','balance',
+  'delight',"happy","sad",
+  "smile","notebook"
+];
 
 let answer = '';
-let maxWrong = 10;
+let maxWrong = 10; //최대 틀릴수있는 횟수 
 let mistakes = 0;
 let guessed = [];
 let wordStatus = null;
 
+
+//랜덤으로 단어를 추출한다.
 function randomWord() {
-  answer = programming_languages[Math.floor(Math.random() * programming_languages.length)];
+  answer = words[Math.floor(Math.random() * words.length)];
 }
 
 function generateButtons() {
