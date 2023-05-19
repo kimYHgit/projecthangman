@@ -1,6 +1,7 @@
 const words = ["HAPPY","SAD","NOTEBOOK","EAR","EYE","WALLET"];
 
 
+
 let output = [];
 const word = words[Math.floor(Math.random() * 6)];
 for(let i = 0; i < word.length; i++)
